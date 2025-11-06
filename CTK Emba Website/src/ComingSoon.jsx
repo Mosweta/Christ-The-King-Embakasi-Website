@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./ComingSoon.css";
 import churchImage from "./assets/christtheking 2.jpg";
 
@@ -12,7 +13,7 @@ function ComingSoon() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("2025-11-16T13:00:00").getTime();
+    const targetDate = new Date("2025-11-23T13:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -73,7 +74,13 @@ function ComingSoon() {
           <span className="numbercomingsoon">{timeLeft.seconds}</span>
           <span className="textcomingsoon">Seconds</span>
         </div>
+        
       </div>
+      
+          
+            <Link to="/contactus" className="contactlink">Contact Us</Link>
+          
+        
     </section>
   );
 }

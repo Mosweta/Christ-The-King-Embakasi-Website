@@ -85,4 +85,34 @@ body, html {
   margin-top: 5px;
   text-transform: capitalize;
 }
+.contactlink {
+  display: inline-block;
+  background-color: #1D6B4C;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none ;           /* removes any border */
+  outline: none;          /* removes focus outline */
+  transition: all 0.3s ease;
+  box-shadow: none; 
+  cursor: pointer;        /* makes it look clickable */
+}
+
+.contactlink:hover {
+  background-color: #5029bc;
+  transform: translateY(-3px);
+  box-shadow: none; 
+}
+
+.contactlink:focus,
+.contactlink:active {
+  outline: none;
+  border: none;
+  box-shadow: none ; 
+  transform: translateY(0);
+}
+
  
