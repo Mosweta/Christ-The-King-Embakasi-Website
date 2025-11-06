@@ -111,7 +111,7 @@ const ContactForm = () => {
           </div>
               <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="6Ld9HwQsAAAAABmojhOaST-jPdDd6waCs1wGfC8h"
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
               onChange={(val) => setCaptchaValue(val)}
             />
           <div className="button">
