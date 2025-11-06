@@ -120,7 +120,7 @@ const confirmationMailOptions = {
 
       <!-- Header -->
       <div style="background: linear-gradient(90deg, #1D6B4C, #7E212E); color: white; text-align: center; padding: 25px;">
-        <img src="https://christthekingemba.netlify.app/" alt="Christ The King Parish Logo" style="width: 90px; border-radius: 50%; margin-bottom: 10px;" />
+        <img src="https://christthekingemba.netlify.app/logo.png" alt="Christ The King Parish Logo" style="width: 90px; border-radius: 50%; margin-bottom: 10px;" />
         <h2 style="margin: 0;">Christ The King Catholic Parish, Embakasi</h2>
         <p style="margin: 5px 0 0;">"To Serve, To Love, To Grow in Faith"</p>
       </div>
