@@ -24,7 +24,7 @@ const ContactForm = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/send-email", {
+      const res = await fetch("https://christ-the-king-embakasi-website.onrender.com/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, token: captchaValue }),
@@ -98,6 +98,7 @@ const ContactForm = () => {
           </div>
           <div className="input-box">
             <input type="email" name="email"
+             value={form.email}
              placeholder="Enter your email"
              onChange={handleChange}
               required />
