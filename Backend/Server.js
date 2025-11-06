@@ -28,6 +28,9 @@ async function verifyCaptcha(token) {
   return res.json();
 }
 
+app.get("/", (req, res) => {
+  res.send("✅ Christ The King Backend is running!");
+});
 
 app.use(cors({
   origin: [
