@@ -10,7 +10,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
-
+app.set('trust proxy', 1);
 // Rate Limiter
 const limiter = rateLimit({
   windowMs: 60 * 1000, // 1 minute
@@ -27,6 +27,16 @@ async function verifyCaptcha(token) {
   );
   return res.json();
 }
+
+
+app.use(cors({
+  origin: [
+    "https://christthekingemba.netlify.app", // your frontend
+    "http://localhost:5173" // local testing
+  ],
+  methods: ["POST", "GET"]
+}));
+
 
   app.post("/send-email", async (req, res) => {
   const { name, email, message } = req.body;
@@ -161,4 +171,8 @@ const confirmationMailOptions = {
   }
 });
 
-app.listen(5000, () => console.log("✅ Server running on port 5000"));
+
+
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`));
